@@ -1,7 +1,7 @@
 import knex from "knex";
 
-export default function Db(table: string) {
-    return knex({
+export default function Db(table?: string) {
+    const knexV: any = knex({
         client: 'sqlite3',
         connection: {
             filename: './storage/db.sqlite'
@@ -10,5 +10,6 @@ export default function Db(table: string) {
         migrations: {
             directory: './database/migrations'
         }
-    })(table);
+    });
+    return table ? knexV(table) : knexV;
 }
