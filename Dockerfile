@@ -18,6 +18,7 @@ WORKDIR /app
 RUN addgroup -S app && adduser -S app -G app
 
 COPY --from=build /app/build ./build
+COPY --from=build /app/src ./src
 COPY --from=build /app/package.json ./
 COPY --from=build /app/package-lock.json ./
 COPY --from=build /app/database ./database
