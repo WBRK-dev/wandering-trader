@@ -31,8 +31,13 @@ export default class LoginCommand implements Command {
             }
             Print.info(`Removed database file at: ${dbLocation}`);
             return;
+        } else if (args[0] === "create" && args[1]) {
+            const migrationLocation = await Db().migrate.make(args[1]);
+            Print.info('Migration created at:');
+            Print.info(migrationLocation);
+            process.exit(0);
         }
 
-        Print.error("Invalid command. Use 'migrate', 'rollback', or 'down'.");
+        Print.error("Invalid command. Use 'migrate', 'rollback', 'down' or 'create'.");
     }
 }
