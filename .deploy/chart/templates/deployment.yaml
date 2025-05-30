@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wandering-trader
+  labels:
+    app: wandering-trader
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wandering-trader
+  template:
+    metadata:
+      labels:
+        app: wandering-trader
+    spec:
+      imagePullSecrets:
+        - name: ghcr-reg
+      containers:
+        - name: wandering-trader
+          image: "ghcr.io/wbrk-dev/wandering-trader:latest"
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: MAIL_HOST
+              value: {{ .Values.mail.host | quote }}
+            - name: MAIL_PORT
+              value: {{ .Values.mail.port | quote }}
+            - name: MAIL_USERNAME
+              value: {{ .Values.mail.username | quote }}
+            - name: MAIL_PASSWORD
+              value: {{ .Values.mail.password | quote }}
+            - name: MAIL_FROM_NAME
+              value: {{ .Values.mail.fromName | quote }}
+            - name: MAIL_FROM_ADDRESS
+              value: {{ .Values.mail.fromAddress | quote }}
+            - name: MAIL_SECURE
+              value: {{ .Values.mail.secure | quote }}
+            - name: REPORT_EMAIL
+              value: {{ .Values.mail.reportEmail | quote }}
+          volumeMounts:
+            - mountPath: /app/storage
+              name: wt-storage
+      volumes:
+        - name: wt-storage
+          persistentVolumeClaim:
+            claimName: wt-pvc

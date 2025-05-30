@@ -1,0 +1,9 @@
+mail:
+  host: ""
+  port: ""
+  username: ""
+  password: ""
+  fromName: ""
+  fromAddress: ""
+  secure: ""
+  reportEmail: ""
