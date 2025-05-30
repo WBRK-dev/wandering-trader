@@ -1,20 +1,21 @@
-FROM node:22-slim AS build
+FROM node:22-alpine AS build
 
 WORKDIR /app
 
 COPY . .
 
-RUN apt update && apt install -y sqlite3 build-essential python3 && apt clean
+RUN apk add sqlite
 
+RUN npm install sqlite3 --save
 RUN npm install --ignore-scripts
 
 RUN npm run build
 
-FROM node:22-slim AS prod
+FROM node:22-alpine AS prod
 
 WORKDIR /app
 
-RUN addgroup --system app && adduser --system --ingroup app app
+RUN addgroup -S app && adduser -S app -G app
 
 COPY --from=build /app/build ./build
 COPY --from=build /app/package.json ./
@@ -29,4 +30,4 @@ USER app
 
 ENV NODE_ENV=production
 
-CMD [ "node", "build/", "daemon" ]
+CMD [ "npm", "start", "daemon" ]
