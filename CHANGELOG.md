@@ -1,3 +1,12 @@
+## [1.1.2](https://github.com/WBRK-dev/wandering-trader/compare/1.1.1...1.1.2) (2025-05-30)
+
+
+### Bug Fixes
+
+* fixed docker image build ([ace21ea](https://github.com/WBRK-dev/wandering-trader/commit/ace21eaefaaa03b7b68fe1308409ff44cf29eef3))
+
+
+
 ## [1.1.1](https://github.com/WBRK-dev/wandering-trader/compare/1.1.0...1.1.1) (2025-05-30)
 
 
