@@ -1,4 +1,14 @@
-# 1.1.0 (2025-05-30)
+## [1.1.1](https://github.com/WBRK-dev/wandering-trader/compare/1.1.0...1.1.1) (2025-05-30)
+
+
+### Bug Fixes
+
+* automatically create db file if it does not exist ([ff30b63](https://github.com/WBRK-dev/wandering-trader/commit/ff30b632fe429ed3989c6c469c6c9c93b7232510))
+* fixed docker image build ([75b76d3](https://github.com/WBRK-dev/wandering-trader/commit/75b76d39c388b99b79c35d2a14f336b333d56ea2))
+
+
+
+# [1.1.0](https://github.com/WBRK-dev/wandering-trader/compare/73ab18fa934a83802e644d0927ad15bb142957f4...1.1.0) (2025-05-30)
 
 
 ### Bug Fixes
