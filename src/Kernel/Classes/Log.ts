@@ -1,3 +1,4 @@
+import { existsSync } from "node:fs";
 import { writeFile } from "node:fs/promises";
 
 export default class {
@@ -6,6 +7,9 @@ export default class {
     ) { }
 
     private async write(message: string): Promise<void> {
+        if (!existsSync(`storage/${this._file}`))
+            await writeFile(`storage/${this._file}`, "", { flag: "wx" });
+
         await writeFile(`storage/${this._file}`, `${this.getDate()} ${message}\n`, { flag: "a" });
     }
 
