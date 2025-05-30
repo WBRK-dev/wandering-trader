@@ -1,7 +1,8 @@
-import knex from "knex";
 import Command from "../Kernel/Interfaces/Command.js";
 import Db from "../Kernel/Support/Facades/Db.js";
 import Print from "../Kernel/Support/Facades/Print.js";
+import path from "node:path";
+import fs from "node:fs/promises";
 
 export default class LoginCommand implements Command {
     description = "Run the database handler";
@@ -19,10 +20,17 @@ export default class LoginCommand implements Command {
             migrations.forEach((migration: string) => Print.info(`Migration: ${migration}`));
             process.exit(0);
         } else if (args[0] === "down") {
-            const [ count, migrations ] = await Db().migrate.down();
-            Print.info(`Migration index: ${count}`);
-            migrations.forEach((migration: string) => Print.info(`Migration: ${migration}`));
-            process.exit(0);
+            const dbLocation = path.resolve(Db().client.config.connection.filename);
+
+            try {
+                await fs.access(dbLocation);
+                await fs.rm(dbLocation);
+            } catch {
+                Print.error(`Database file does not exist at: ${dbLocation}`);
+                return;
+            }
+            Print.info(`Removed database file at: ${dbLocation}`);
+            return;
         }
 
         Print.error("Invalid command. Use 'migrate', 'rollback', or 'down'.");
