@@ -1,3 +1,12 @@
+## [1.1.6](https://github.com/WBRK-dev/wandering-trader/compare/1.1.5...1.1.6) (2025-05-30)
+
+
+### Bug Fixes
+
+* fixed crontab times ([b7e0556](https://github.com/WBRK-dev/wandering-trader/commit/b7e05566531a195efca05efd8e4ce1dc6ad0665c))
+
+
+
 ## [1.1.5](https://github.com/WBRK-dev/wandering-trader/compare/1.1.4...1.1.5) (2025-05-30)
 
 
@@ -26,16 +35,6 @@
 ### Bug Fixes
 
 * fixed docker image build ([ace21ea](https://github.com/WBRK-dev/wandering-trader/commit/ace21eaefaaa03b7b68fe1308409ff44cf29eef3))
-
-
-
-## [1.1.1](https://github.com/WBRK-dev/wandering-trader/compare/1.1.0...1.1.1) (2025-05-30)
-
-
-### Bug Fixes
-
-* automatically create db file if it does not exist ([ff30b63](https://github.com/WBRK-dev/wandering-trader/commit/ff30b632fe429ed3989c6c469c6c9c93b7232510))
-* fixed docker image build ([75b76d3](https://github.com/WBRK-dev/wandering-trader/commit/75b76d39c388b99b79c35d2a14f336b333d56ea2))
 
 
 
