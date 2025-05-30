@@ -21,7 +21,7 @@ export default abstract class Mail {
         const view = this.build();
 
         const transporter = this.getTransporter();
-        transporter.sendMail({
+        await transporter.sendMail({
             from: `"${process.env.MAIL_FROM_NAME}" <${process.env.MAIL_FROM_ADDRESS}>`,
             to,
             subject: this.subject,
