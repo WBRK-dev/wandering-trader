@@ -1,3 +1,12 @@
+## [1.1.3](https://github.com/WBRK-dev/wandering-trader/compare/1.1.2...1.1.3) (2025-05-30)
+
+
+### Bug Fixes
+
+* change stat reports to better times ([523cce1](https://github.com/WBRK-dev/wandering-trader/commit/523cce1ae43c306ef9cf2572a4408592e01de97f))
+
+
+
 ## [1.1.2](https://github.com/WBRK-dev/wandering-trader/compare/1.1.1...1.1.2) (2025-05-30)
 
 
