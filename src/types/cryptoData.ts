@@ -37,3 +37,14 @@ export type CryptoData = {
     approximate_quote_24h_volume: string;
     new_at: string;
 }
+
+export type CryptoCandles = {
+    candles: {
+        start: string;
+        low: string;
+        high: string;
+        open: string;
+        close: string;
+        volume: string;
+    }[];
+}

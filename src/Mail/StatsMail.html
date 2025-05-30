@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+  <body>
+    <div
+      style='background-color:#F5F5F5;color:#262626;font-family:"Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;font-size:16px;font-weight:400;letter-spacing:0.15008px;line-height:1.5;margin:0;padding:32px 0;min-height:100%;width:100%'
+    >
+      <table
+        align="center"
+        width="100%"
+        style="margin:0 auto;max-width:600px;background-color:#FFFFFF;border-radius:8px"
+        role="presentation"
+        cellspacing="0"
+        cellpadding="0"
+        border="0"
+      >
+        <tbody>
+          <tr style="width:100%">
+            <td>
+              <h2
+                style="font-weight:bold;text-align:center;margin:0;font-size:24px;padding:16px 24px 16px 24px"
+              >
+                Wandering Trader
+              </h2>
+              <div style="padding:8px 24px 8px 24px">
+                <div style="padding:0px 24px 0px 24px">
+                  <table
+                    align="center"
+                    width="100%"
+                    cellpadding="0"
+                    border="0"
+                    style="table-layout:fixed;border-collapse:collapse"
+                  >
+                    <tbody style="width:100%">
+                      <tr style="width:100%">
+                        <td
+                          style="box-sizing:content-box;vertical-align:middle;padding-left:0;padding-right:8px"
+                        >
+                          <div
+                            style="text-align:center;padding:0px 24px 0px 24px"
+                          >
+                            <img
+                              alt=""
+                              src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJMYXllcl8xIiBkYXRhLW5hbWU9IkxheWVyIDEiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiPjxwYXRoIGQ9Ik0yMSw2aC02Yy0uNTUzLDAtMSwuNDQ3LTEsMXMuNDQ3LDEsMSwxaDUuNTg2bC02LjU2Miw2LjU2MmMtLjU2NCwuNTY0LTEuNDgyLC41NjQtMi4wNDcsMGwtMi41MzktMi41MzljLTEuMzQ0LTEuMzQ0LTMuNTMxLTEuMzQ0LTQuODc1LDBMLjI5MywxNi4yOTNjLS4zOTEsLjM5MS0uMzkxLDEuMDIzLDAsMS40MTQsLjE5NSwuMTk1LC40NTEsLjI5MywuNzA3LC4yOTNzLjUxMi0uMDk4LC43MDctLjI5M2w0LjI3LTQuMjdjLjU0Ny0uNTQ3LDEuNS0uNTQ3LDIuMDQ3LDBsMi41MzksMi41MzljMS4zNDQsMS4zNDQsMy41MzEsMS4zNDQsNC44NzUsMGw2LjU2My02LjU2MnY1LjU4NmMwLC41NTMsLjQ0NywxLDEsMXMxLS40NDcsMS0xdi02YzAtMS42NTQtMS4zNDYtMy0zLTNaIi8+PC9zdmc+Cg=="
+                              height="32"
+                              width="32"
+                              style="outline:none;border:none;text-decoration:none;object-fit:cover;height:32px;width:32px;max-width:100%;display:inline-block;vertical-align:middle;text-align:center;"
+                            />
+                          </div>
+                          <div
+                            style="font-weight:normal;text-align:center;padding:0px 24px 0px 24px"
+                          >
+                            € {{ this.returnOrderProfit }}
+                          </div>
+                        </td>
+                        <td
+                          style="box-sizing:content-box;vertical-align:middle;padding-left:8px;padding-right:0"
+                        >
+                          <div
+                            style="text-align:center;padding:0px 24px 0px 24px"
+                          >
+                            <img
+                              alt=""
+                              src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJGaWxsZWQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiPjxwYXRoIGQ9Ik0xOCwxMmE1Ljk5Myw1Ljk5MywwLDAsMS01LjE5MS05SDQuMjQyTDQuMiwyLjY0OEEzLDMsMCwwLDAsMS4yMjIsMEgxQTEsMSwwLDAsMCwxLDJoLjIyMmExLDEsMCwwLDEsLjk5My44ODNsMS4zNzYsMTEuN0E1LDUsMCwwLDAsOC41NTcsMTlIMTlhMSwxLDAsMCwwLDAtMkg4LjU1N2EzLDMsMCwwLDEtMi44MjEtMkgxNy42NTdhNSw1LDAsMCwwLDQuOTIxLTQuMTEzbC4yMzgtMS4zMTlBNS45ODQsNS45ODQsMCwwLDEsMTgsMTJaIi8+PGNpcmNsZSBjeD0iNyIgY3k9IjIyIiByPSIyIi8+PGNpcmNsZSBjeD0iMTciIGN5PSIyMiIgcj0iMiIvPjxwYXRoIGQ9Ik0xNS43MzMsOC45NDZhMS44NzIsMS44NzIsMCwwLDAsMS4zNDUuNmguMDMzYTEuODczLDEuODczLDAsMCwwLDEuMzM1LS41NTNsNC4yNzItNC4yNzJBMSwxLDAsMSwwLDIxLjMsMy4zTDE3LjExMyw3LjQ5NCwxNS44NzksNi4xN2ExLDEsMCwwLDAtMS40NjMsMS4zNjZaIi8+PC9zdmc+Cg=="
+                              height="32"
+                              width="32"
+                              style="outline:none;border:none;text-decoration:none;object-fit:cover;height:32px;width:32px;max-width:100%;display:inline-block;vertical-align:middle;text-align:center;"
+                            />
+                          </div>
+                          <div
+                            style="font-weight:normal;text-align:center;padding:0px 24px 0px 24px"
+                          >
+                            {{ this.returnOrderCount }}
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <h3
+                style="font-weight:bold;margin:0;font-size:20px;padding:16px 24px 0px 24px"
+              >
+                Orders
+              </h3>
+              {{ if (this.orders.length === 0)
+                `<div style="padding:16px 24px">No orders.</div>`
+                else ''
+              }}
+              <div style="padding:0px 0px 0px 0px">
+                <table
+                  align="center"
+                  width="100%"
+                  cellpadding="0"
+                  border="0"
+                  style="table-layout:fixed;border-collapse:collapse"
+                >
+                  <tbody style="width:100%">
+                    {{ this.orders.map(order => `
+                    <tr style="width:100%">
+                      <td
+                        style="box-sizing:content-box;vertical-align:middle;padding-left:0;padding-right:0"
+                      >
+                        <div
+                          style="font-weight:normal;padding:16px 24px 16px 24px"
+                        >
+                          ${order.amount.toFixed(7)} ${order.product}
+                        </div>
+                      </td>
+                      <td
+                        style="box-sizing:content-box;vertical-align:middle;padding-left:0;padding-right:0"
+                      >
+                        <div
+                          style="font-weight:normal;padding:16px 24px 16px 24px"
+                        >
+                          € ${order.startPrice.toFixed(2)}
+                        </div>
+                      </td>
+                      <td
+                        style="box-sizing:content-box;vertical-align:middle;padding-left:0;padding-right:0"
+                      >
+                        <div
+                          style="color: ${order.percentage < 0 ? '#DC2626' : 'green'};font-weight:normal;padding:16px 24px 16px 24px"
+                        >
+                          € ${order.price.toFixed(2)} (${order.percentage.toFixed(2)}%)
+                        </div>
+                      </td>
+                    </tr>
+                    `).join('') }}
+                  </tbody>
+                </table>
+              </div>
+              <h3
+                style="font-weight:bold;margin:0;font-size:20px;padding:16px 24px 0px 24px"
+              >
+                Returned Orders
+              </h3>
+              {{ if (this.returnOrders.length === 0)
+                `<div style="padding:16px 24px">No returned orders.</div>`
+                else ''
+              }}
+              <div style="padding:0px 0px 0px 0px">
+                <table
+                  align="center"
+                  width="100%"
+                  cellpadding="0"
+                  border="0"
+                  style="table-layout:fixed;border-collapse:collapse"
+                >
+                  <tbody style="width:100%">
+                    {{ this.returnOrders.map(order => `
+                    <tr style="width:100%">
+                      <td
+                        style="box-sizing:content-box;vertical-align:middle;padding-left:0;padding-right:0"
+                      >
+                        <div
+                          style="font-weight:normal;padding:16px 24px 16px 24px"
+                        >
+                          ${order.amount.toFixed(7)} ${order.product}
+                        </div>
+                      </td>
+                      <td
+                        style="box-sizing:content-box;vertical-align:middle;padding-left:0;padding-right:0"
+                      >
+                        <div
+                          style="font-weight:normal;padding:16px 24px 16px 24px"
+                        >
+                          € ${order.startPrice.toFixed(2)}
+                        </div>
+                      </td>
+                      <td
+                        style="box-sizing:content-box;vertical-align:middle;padding-left:0;padding-right:0"
+                      >
+                        <div
+                          style="color: ${order.percentage < 0 ? '#DC2626' : 'green'};font-weight:normal;padding:16px 24px 16px 24px"
+                        >
+                          € ${order.price.toFixed(2)} (${order.percentage.toFixed(2)}%)
+                        </div>
+                      </td>
+                    </tr>
+                    `).join('') }}
+                  </tbody>
+                </table>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
