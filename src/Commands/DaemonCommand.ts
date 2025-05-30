@@ -4,6 +4,7 @@ import { CronJob } from 'cron';
 import HandleCryptoTick from "../CronJobs/HandleCryptoTick.js";
 import CheckIfDaemonCanRun from "../Services/CheckIfDaemonCanRun.js";
 import WeeklyReport from "../CronJobs/WeeklyReport.js";
+import DailyReport from "../CronJobs/DailyReport.js";
 
 export default class LoginCommand implements Command {
     description = "Run the daemon process";
@@ -22,6 +23,13 @@ export default class LoginCommand implements Command {
         new CronJob(
             '0 0 * * 0',
             WeeklyReport,
+            null,
+            true,
+            'Europe/Amsterdam',
+        );
+        new CronJob(
+            '0 0 * * 1',
+            DailyReport,
             null,
             true,
             'Europe/Amsterdam',
