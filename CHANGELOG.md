@@ -1,0 +1,21 @@
+# 1.1.0 (2025-05-30)
+
+
+### Bug Fixes
+
+* added cronjob instead of direct call ([506b852](https://github.com/WBRK-dev/wandering-trader/commit/506b8526f72f1fdc1a58c9a1384d2070a65f0275))
+* create a proper down method ([3285e25](https://github.com/WBRK-dev/wandering-trader/commit/3285e251224928e997859cdcca45934d16911b80))
+* renamed command to daemon ([73ab18f](https://github.com/WBRK-dev/wandering-trader/commit/73ab18fa934a83802e644d0927ad15bb142957f4))
+
+
+### Features
+
+* added a send stats report command ([cd818a1](https://github.com/WBRK-dev/wandering-trader/commit/cd818a101ec99c34d0468d363c0a5625df2353fc))
+* added daily report ([baa9767](https://github.com/WBRK-dev/wandering-trader/commit/baa97679676dbdefa327d891bb1c3f389e94371f))
+* added db command ([cd03a6b](https://github.com/WBRK-dev/wandering-trader/commit/cd03a6bee87cd7363831181ef1b7f21fcee57cf3))
+* added docker deployments ([eac0383](https://github.com/WBRK-dev/wandering-trader/commit/eac03831dccf8c908cbabe62f0f64e9af28f990c))
+* added Dockerfile ([b054b95](https://github.com/WBRK-dev/wandering-trader/commit/b054b95f11e73352dd9e6381fb85fe36e9f06f81))
+* added weekly mail, added test buy and sell ([05b484d](https://github.com/WBRK-dev/wandering-trader/commit/05b484d1dc8360402f7f3c4773a0b652649379d1))
+
+
+
