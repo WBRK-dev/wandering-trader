@@ -30,4 +30,4 @@ USER app
 
 ENV NODE_ENV=production
 
-CMD [ "npm", "start", "daemon" ]
+CMD [ "node", "build/", "daemon" ]
