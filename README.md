@@ -15,3 +15,15 @@ Run the daemon. (or run `node build/ daemon`)
 ```
 npm start daemon
 ```
+
+### Required environment variables
+```
+MAIL_FROM_NAME      string
+MAIL_FROM_ADDRESS   string
+MAIL_HOST           string
+MAIL_PORT           number
+MAIL_USERNAME       string
+MAIL_PASSWORD       string
+MAIL_SECURE         'true' | 'false'
+REPORT_EMAIL        string
+```
