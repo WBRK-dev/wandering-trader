@@ -34,17 +34,11 @@ export default abstract class Mail {
             return this.buildView;
         }
 
-        Print.debug(existsSync(this.view));
-        Print.debug(this.view);
         if (!existsSync(this.view))
             throw new ViewNotFoundError(this.view);
 
         let content = readFileSync(this.view, 'utf-8');
-        content = content.replaceAll(/{{\s*([\s\S]*?)\s*}}/g, (match, p1) => {
-            Print.debug(`View: ${match}, ${p1}`);
-            Print.debug(eval(p1));
-            return eval(p1);
-        });
+        content = content.replaceAll(/{{\s*([\s\S]*?)\s*}}/g, (match, p1) => eval(p1));
 
         this.buildView = content;
         return content;

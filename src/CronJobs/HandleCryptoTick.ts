@@ -40,7 +40,6 @@ export default async function () {
 
     orders = await Db('orders').select('*').where({ active: 1 }) as Order[];
 
-    Print.debug(`${averagePrice * 0.98} ${price}`);
     if (averagePrice * 0.98 > price) {
         Print.info("Price is below average... Buying!");
 

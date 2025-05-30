@@ -13,8 +13,6 @@ export default async function (startTime: number, customSubject?: string): Promi
         .where({ active: 1 }) as Order[];
 
     for (const order of orders) {
-        Print.debug(`Processing order ${order.id}...`);
-
         const originalPrice = order.price / order.amount * 1;
         const percentageChange = ((Number(cryptoData.price) - originalPrice) / originalPrice) * 100;
         mailOrders.push({
@@ -33,8 +31,6 @@ export default async function (startTime: number, customSubject?: string): Promi
         .where('return_orders.created_at', '>=', startTime) as (Order & { return_price: number })[];
 
     for (const order of returnOrders) {
-        Print.debug(`Processing order ${order.id}...`);
-
         returnMailOrders.push({
             amount: order.amount,
             product: order.product.split('-')[0],
