@@ -1,3 +1,7 @@
+## [1.1.4](https://github.com/WBRK-dev/wandering-trader/compare/1.1.3...1.1.4) (2025-05-30)
+
+
+
 ## [1.1.3](https://github.com/WBRK-dev/wandering-trader/compare/1.1.2...1.1.3) (2025-05-30)
 
 
