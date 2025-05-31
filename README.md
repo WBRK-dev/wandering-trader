@@ -1,6 +1,14 @@
 # Wandering Trader
-A trading bot build for Coinbase.<br>
-Currently fixed to ETH and exchange Coinbase.
+A fake trading bot that tests strategies.<br>
+Currently fixed to ETH.
+
+## Strategy
+The current strategy does the following every hour:
+1. Get the average price from the past 48 hours.
+2. Check if the current price is 2% less than the average price.
+    If so: buy 1 euro worth of ETH.
+3. If the price is 2% more than the bought price of an order?
+    If so: sell the amount in that order.
 
 ## Running
 Build the source.
