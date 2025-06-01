@@ -21,14 +21,14 @@ export default class LoginCommand implements Command {
             'Europe/Amsterdam',
         );
         new CronJob(
-            '0 0 9 * * 6',
+            '0 1 9 * * 6',
             WeeklyReport,
             null,
             true,
             'Europe/Amsterdam',
         );
         new CronJob(
-            '0 0 19 * * *',
+            '0 1 19 * * *',
             DailyReport,
             null,
             true,
