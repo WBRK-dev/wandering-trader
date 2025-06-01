@@ -1,3 +1,12 @@
+## [1.2.1](https://github.com/WBRK-dev/wandering-trader/compare/1.2.0...1.2.1) (2025-06-01)
+
+
+### Bug Fixes
+
+* offset by one minute ([c3b164a](https://github.com/WBRK-dev/wandering-trader/commit/c3b164ae5d316575f1ffa5af41ac5a50f785fcbd))
+
+
+
 # [1.2.0](https://github.com/WBRK-dev/wandering-trader/compare/1.1.6...1.2.0) (2025-05-31)
 
 
@@ -32,15 +41,6 @@
 
 
 ## [1.1.4](https://github.com/WBRK-dev/wandering-trader/compare/1.1.3...1.1.4) (2025-05-30)
-
-
-
-## [1.1.3](https://github.com/WBRK-dev/wandering-trader/compare/1.1.2...1.1.3) (2025-05-30)
-
-
-### Bug Fixes
-
-* change stat reports to better times ([523cce1](https://github.com/WBRK-dev/wandering-trader/commit/523cce1ae43c306ef9cf2572a4408592e01de97f))
 
 
 
